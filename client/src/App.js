@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import Kontrak from "./contracts/Kontrak.json";
 import getWeb3 from "./getWeb3";
-import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 
-import { Navbar, Container, Nav } from "react-bootstrap";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -42,22 +46,9 @@ class App extends Component {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
     return (
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Link to="./components/Home.js">
-            <img
-              alt=""
-              src="/logo.svg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{" "}
-            PT ROMBONG TAHTA MANDIRI
-          </Link>
-          <Nav.Link href="./components/Login">Login</Nav.Link>
-          <Nav.Link href="./components/Register">Register</Nav.Link>
-        </Container>
-      </Navbar>
+      <div>
+        
+      </div>
     );
   }
 }
